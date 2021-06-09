@@ -10,7 +10,7 @@
     let regnum = num.match(/<!-- react-text: 44 -->(.*)<!-- \/react-text -->/);
     
     function getAjaxData(url/*, json*/){
-      var result = "";
+      let result = "";
       $.ajax({
         url: url,
         dataType: "json",
