@@ -7,10 +7,10 @@
   $('body').on('click', '#esrooinc', function(){
     console.log('событие нажатия на кнопку "Создать инц. на ЕСРОО"');
     let num = $('.selected-item').html();
-    let regnum = num.match(/<!-- react-text: 44 -->(.*)<!-- \/react-text -->/);
+    let regnum = num.match(/<!-- react-text: \d+ -->Обращение №<!-- \/react-text --><!-- react-text: \d+ -->(.*)<!-- \/react-text -->/);
     
     function getAjaxData(url/*, json*/){
-      var result = "";
+      let result = "";
       $.ajax({
         url: url,
         dataType: "json",
